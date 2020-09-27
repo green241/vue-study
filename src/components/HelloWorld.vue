@@ -9,7 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App HAHA'
+      msg: 'Welcome to Your Vue.js App HAHA 修改了。。。从dev分支提交到master分支!'
     }
   }
 }
