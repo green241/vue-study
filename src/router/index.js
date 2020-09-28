@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@comps/HelloWorld'
-import TS from '@comps/test/TestScope'
+import TS from '@test/TestScope'
 
 Vue.use(Router)
 

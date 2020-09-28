@@ -1,5 +1,5 @@
 <template>
-  <div class="example">{{testScopeContent}}</div>
+  <div id="testScope" class="example">{{testScopeContent}}</div>
 </template>
 
 <script>

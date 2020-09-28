@@ -18,8 +18,9 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 })
-
-module.exports = {
+// 加载vux-loader，引入vux公共组件使用
+const vuxLoader = require('vux-loader')
+const webpackConfig = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: ['babel-polyfill', './src/main.js']
@@ -37,6 +38,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@assets': resolve('src/assets'),
       '@comps': resolve('src/components'),
+      '@views': resolve('src/views'),
+      '@test': resolve('src/views/test'),
       '@': resolve('src')
     }
   },
@@ -92,3 +95,10 @@ module.exports = {
     child_process: 'empty'
   }
 }
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  options: {},
+  plugins: [{
+    name: 'vux-ui'
+  }]
+})
