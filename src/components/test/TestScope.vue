@@ -1,15 +1,23 @@
 <template>
-  <div class="example">hi</div>
+  <div class="example">{{testScopeContent}}</div>
 </template>
 
 <script>
 export default {
-  name: 'TestScope'
+  name: 'TestScope',
+  props: {
+    testScopeContent: ''
+  },
+  data () {
+    return {
+
+    }
+  }
 }
 </script>
 
 <style scoped>
   .example {
-    color: red;
+    color: red!important;
   }
 </style>
